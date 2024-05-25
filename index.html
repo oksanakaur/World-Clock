@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.js"></script>
     <title>World Clock - K.Segoneco</title>
 </head>
 <body>
@@ -12,25 +14,37 @@
 
       <select>
         <option value="">Select a city...</option>
-        <option value="">Bloemfontein</option>
-        <option value="">London</option>
-        <option value="">Mumbai</option>
+        <option value="current">My current location</option>
+        <option value="Africa/Bloemfontein">Bloemfontein</option>
+        <option value="Europe/London">London</option>
+        <option value="America/New_York">New York</option>
+        <option value="Africa/Cape_Town">Cape Town</option>
+        <option value="Pacific/Auckland">Auckland</option>
       </select>
 
-      <div class="city">
+          <div id="cities">
+    <div class="city" id="bloemfontein">
         <div>
-        <h2>New York</h2>
-        <div class="date">May 25th 2024</div>
+        <h2>Bloemfontein</h2>
+        <div class="date"></div>
         </div>
-        <div class="time">7:49:10 <small>AM</small></div>
-      </div>
-      <div class="city">
-        <div>
-        <h2>New York</h2>
-        <div class="date">May 25th 2024</div>
+        <div class="time"></div>
         </div>
-        <div class="time">7:49:10 <small>AM</small></div>
-      </div>
+        <div class="city" id="new_york">
+           <div>
+           <h2>New York</h2>
+           <div class="date"></div>
+           </div>
+           <div class="time"></div>
+           </div>
+        <div class="city" id="london">
+            <div>
+            <h2>London</h2>
+            <div class="date"></div>
+            </div>
+            <div class="time"></div>
+            </div>
+        </div>
     </div>
     <footer>
         This project was coded by Keolebogile Segoneco and is
