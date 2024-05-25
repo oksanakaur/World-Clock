@@ -11,14 +11,14 @@ function updateTime() {
     );
   }
 
-  //New York
-  let new_yorkElement = document.querySelector("#new_york");
-  if (new_yorkElement) {
-    let new_yorkDateElement = new_yorkElement.querySelector(".date");
-    let new_yorkTimeElement = new_yorkElement.querySelector(".time");
-    let new_yorkTime = moment().tz("America/New York");
-    new_yorkDateElement.innerHTML = new_yorkTime.format("MMMM Do YYYY");
-    new_yorkTimeElement.innerHTML = new_yorkTime.format(
+  //Canberra
+  let canberraElement = document.querySelector("#canberra");
+  if (canberraElement) {
+    let canberraDateElement = canberraElement.querySelector(".date");
+    let canberraTimeElement = canberraElement.querySelector(".time");
+    let canberraTime = moment().tz("Australia/Canberra");
+    canberraDateElement.innerHTML = canberraTime.format("MMMM Do YYYY");
+    canberraTimeElement.innerHTML = canberraTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
@@ -31,6 +31,18 @@ function updateTime() {
     let londonTime = moment().tz("Europe/London");
     londonDateElement.innerHTML = londonTime.format("MMMM Do YYYY");
     londonTimeElement.innerHTML = londonTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  // Dubai
+  let dubaiElement = document.querySelector("#dubai");
+  if (dubaiElement) {
+    let dubaiDateElement = dubaiElement.querySelector(".date");
+    let dubaiTimeElement = dubaiElement.querySelector(".time");
+    let dubaiTime = moment().tz("Asia/Dubai");
+    dubaiDateElement.innerHTML = dubaiTime.format("MMMM Do YYYY");
+    dubaiTimeElement.innerHTML = dubaiTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
